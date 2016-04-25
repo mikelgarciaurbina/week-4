@@ -1,0 +1,21 @@
+<h1>Results</h1>
+
+<p>Your text:</p>
+
+<p><%= @text %></p>
+
+<p>Words: <%= @word_count %></p>
+
+<p>Reading time: <%= @reading_time %>s</p>
+
+<%= link_to "Home", "/" %>
+
+<p>Word frequency</p>
+
+<ul>
+	<% @order_words.each_with_index do |val, index| %>
+		<% if index < 10 %>
+			<li><%= val[0].to_s %> -> <%= val[1] %></li>
+		<% end %>
+	<% end %>
+</ul>

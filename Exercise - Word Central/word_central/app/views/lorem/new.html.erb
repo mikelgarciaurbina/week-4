@@ -1,0 +1,19 @@
+<h1>Word Central</h1>
+
+<h2>Generate placeholder text</h2>
+
+<form action="/lorem" method="post">
+	<div>
+		<label for="lorem_user_text">Text</label>
+		<select name="text_lorem[paragraphs]" id="lorem_user_text">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</div>
+	<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+	<button type="submit">Submit</button>
+</form>

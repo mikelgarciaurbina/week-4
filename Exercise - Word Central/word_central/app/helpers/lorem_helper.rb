@@ -1,0 +1,2 @@
+module LoremHelper
+end
