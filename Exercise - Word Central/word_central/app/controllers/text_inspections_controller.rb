@@ -16,7 +16,7 @@ class TextInspectionsController < ApplicationController
       end
     end
 
-    @order_words = words_count.sort_by{ |key, value| -value }
+    @order_words = words_count.sort_by{ |key, value| value }.reverse
 
     @reading_time = (@word_count / 275.0) * 60
 
