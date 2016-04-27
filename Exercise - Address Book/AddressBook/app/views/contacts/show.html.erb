@@ -1,0 +1,16 @@
+<h1>Contact Description</h1>
+
+<h2><%= @contact.name %></h2>
+
+<p>Address: <%= @contact.address %></p>
+<p>Email: <%= @contact.email %></p>
+<p>Phone: <%= @contact.phone %></p>
+<%= link_to image_tag(@contact.image.url), @contact.image.url, target: '_blank' %>
+
+<form action="/contacts/create_favorite" method="POST">
+  <input type="hidden" name="contact[id]"
+      value="<%= @contact.id %>">
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+  <button type="submit">Make favorite</button>
+</form>
