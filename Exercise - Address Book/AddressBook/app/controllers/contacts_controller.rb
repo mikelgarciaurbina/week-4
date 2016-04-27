@@ -14,16 +14,6 @@ class ContactsController < ApplicationController
     else
       redirect_to '/contacts/new'
     end
-    # contact = Contact.new(
-    #   :name => params[:contact][:name],
-    #   :address => params[:contact][:address],
-    #   :phone => params[:contact][:phone],
-    #   :email => params[:contact][:email],
-    #   :image => params[:contact][:image])
-
-    # contact.save
-
-    # redirect_to("/contacts")
   end
 
   def show
