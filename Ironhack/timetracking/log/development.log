@@ -1498,3 +1498,256 @@ Migrating to CreateTimeEntries (20160427082417)
   [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 3]]
   [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 4]]
   [1m[35mTimeEntry Load (0.2ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 4]]
+
+
+Started GET "/projects/1" for ::1 at 2016-04-27 11:36:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered projects/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 127ms (Views: 115.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/time_entries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:36:59 +0200
+
+
+Started GET "/assets/time_entries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:36:59 +0200
+
+
+Started GET "/projects/1/time_entries" for ::1 at 2016-04-27 11:37:04 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 1]]
+  Rendered time_entries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:37:09 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:39:55 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/site.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/time_entries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/site.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/time_entries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-27 11:39:55 +0200
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:40:01 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:40:54 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.2ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:42:49 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/projects.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/site.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/time_entries.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/projects.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/site.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/time_entries.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-04-27 11:42:49 +0200
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:50:48 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (1.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date in '2016-03-27','2016-03-28','2016-03-29','2016-03-30','2016-03-31','2016-04-01','2016-04-02','2016-04-03','2016-04-04','2016-04-05','2016-04-06','2016-04-07','2016-04-08','2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14','2016-04-15','2016-04-16','2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22','2016-04-23','2016-04-24','2016-04-25','2016-04-26','2016-04-27')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near ",": syntax error: SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date in '2016-03-27','2016-03-28','2016-03-29','2016-03-30','2016-03-31','2016-04-01','2016-04-02','2016-04-03','2016-04-04','2016-04-05','2016-04-06','2016-04-07','2016-04-08','2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14','2016-04-15','2016-04-16','2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22','2016-04-23','2016-04-24','2016-04-25','2016-04-26','2016-04-27')):
+    1: <h1><%= @project.name %></h1>
+    2: 
+    3: <ul>
+    4: 	<% @time_entries.each do |time_entry| %>
+    5: 		<li>
+    6: 			<div><%= time_entry.hours %> h <%= time_entry.minutes %> m - <%= time_entry.date.strftime("%F") %></div>
+    7: 			<div><%= time_entry.comments %></div>
+  app/views/time_entries/index.html.erb:4:in `_app_views_time_entries_index_html_erb___4176138789104783741_70288304485880'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.8ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:53:00 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.7ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date IN '2016-03-27','2016-03-28','2016-03-29','2016-03-30','2016-03-31','2016-04-01','2016-04-02','2016-04-03','2016-04-04','2016-04-05','2016-04-06','2016-04-07','2016-04-08','2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14','2016-04-15','2016-04-16','2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22','2016-04-23','2016-04-24','2016-04-25','2016-04-26','2016-04-27')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near ",": syntax error: SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date IN '2016-03-27','2016-03-28','2016-03-29','2016-03-30','2016-03-31','2016-04-01','2016-04-02','2016-04-03','2016-04-04','2016-04-05','2016-04-06','2016-04-07','2016-04-08','2016-04-09','2016-04-10','2016-04-11','2016-04-12','2016-04-13','2016-04-14','2016-04-15','2016-04-16','2016-04-17','2016-04-18','2016-04-19','2016-04-20','2016-04-21','2016-04-22','2016-04-23','2016-04-24','2016-04-25','2016-04-26','2016-04-27')):
+    1: <h1><%= @project.name %></h1>
+    2: 
+    3: <ul>
+    4: 	<% @time_entries.each do |time_entry| %>
+    5: 		<li>
+    6: 			<div><%= time_entry.hours %> h <%= time_entry.minutes %> m - <%= time_entry.date.strftime("%F") %></div>
+    7: 			<div><%= time_entry.comments %></div>
+  app/views/time_entries/index.html.erb:4:in `_app_views_time_entries_index_html_erb___4176138789104783741_70288304485880'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.2ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:53:58 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.2ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-03-27')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 22.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:54:35 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-03-27')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for ::1 at 2016-04-27 11:54:36 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects"  ORDER BY "projects"."created_at" DESC LIMIT 10[0m
+  Rendered projects/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:54:41 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-03-27')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:57:09 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.2ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-03-27')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 34ms (Views: 24.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 11:58:03 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-03-27')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
