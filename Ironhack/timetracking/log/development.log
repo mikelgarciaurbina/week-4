@@ -1751,3 +1751,814 @@ Processing by TimeEntriesController#index as HTML
   [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-03-27')[0m  [["project_id", 2]]
   Rendered time_entries/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-27 12:31:05 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `project_time_entries_path' for #<#<Class:0x007fda84545270>:0x007fda8ad5c6d8>):
+    1: <h1>Add a Time Entry</h1>
+    2: <%= form_for [@project, @time_entry] do |f| %>
+    3: 	<%= f.label :hours %>
+    4: 	<%= f.text_field :hours %>
+    5: 
+  app/views/time_entries/new.html.erb:2:in `_app_views_time_entries_new_html_erb___682887402422443194_70288304429800'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.6ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-27 12:32:12 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (20.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `project_time_entries_path' for #<#<Class:0x007fda84545270>:0x007fda8ac86380>):
+    1: <h1>Add a Time Entry</h1>
+    2: <%= form_for [@project, @time_entry] do |f| %>
+    3: 	<%= f.label :hours %>
+    4: 	<%= f.text_field :hours %>
+    5: 
+  app/views/time_entries/new.html.erb:2:in `_app_views_time_entries_new_html_erb___682887402422443194_70288304429800'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.9ms)
+
+
+Started GET "/projects" for ::1 at 2016-04-27 12:32:25 +0200
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects"  ORDER BY "projects"."created_at" DESC LIMIT 10
+  Rendered projects/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-27 12:32:34 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.2ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-27 12:32:40 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `project_time_entries_path' for #<#<Class:0x007fda84545270>:0x007fda87873598>):
+    1: <h1>Add a Time Entry</h1>
+    2: <%= form_for [@project, @time_entry] do |f| %>
+    3: 	<%= f.label :hours %>
+    4: 	<%= f.text_field :hours %>
+    5: 
+  app/views/time_entries/new.html.erb:2:in `_app_views_time_entries_new_html_erb___682887402422443194_70288304429800'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.7ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-27 12:45:18 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 37ms (Views: 23.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-27 13:01:16 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 35ms (Views: 19.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for ::1 at 2016-04-28 10:09:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.5ms)[0m  SELECT  "projects".* FROM "projects"  ORDER BY "projects"."created_at" DESC LIMIT 10
+  Rendered projects/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 310ms (Views: 294.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 10:09:42 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.8ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 53ms (Views: 28.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 10:09:49 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/projects/2/time_entries" for ::1 at 2016-04-28 10:09:54 +0200
+Processing by TimeEntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aT8SA28GU9coyQBGeiZHJV817JqO5/cJvpzGXRUqwGzcFUuaXgRGSTpu5Nmb12Ct6N9cj814pxVvLKHeMNdrrg==", "time_entry"=>{"hours"=>"", "minutes"=>"", "comments"=>"", "date"=>""}, "commit"=>"Save", "project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  Rendered time_entries/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 42ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 10:10:05 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/projects/2/time_entries" for ::1 at 2016-04-28 10:10:12 +0200
+Processing by TimeEntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iADtBUOdxJeHq4aqr15V7sKojbFOrUq4qbR8je5XnYY9KrSccp/RCZUMYjVOr3JmdUI9pA0yGqR4BBsOy6o2RA==", "time_entry"=>{"hours"=>"", "minutes"=>"", "comments"=>"", "date"=>""}, "commit"=>"Save", "project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered time_entries/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 10:47:07 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 38.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/2/time_entries/1" for ::1 at 2016-04-28 10:47:09 +0200
+
+ActionController::RoutingError (No route matches [GET] "/projects/2/time_entries/1"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.2ms)
+
+
+Started GET "/projects/2/time_entries/1/new" for ::1 at 2016-04-28 10:47:13 +0200
+
+ActionController::RoutingError (No route matches [GET] "/projects/2/time_entries/1/new"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.3ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:47:25 +0200
+Processing by TimeEntriesController#edit as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 1]]
+  Rendered time_entries/edit.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `project_time_entry_path' for #<#<Class:0x007fb31ed556c8>:0x007fb322326220>):
+     8: 	</ul>
+     9: <% end %>
+    10: 
+    11: <%= form_for [@project, @time_entry] do |f| %>
+    12: 	<%= f.label :hours %>
+    13: 	<%= f.text_field :hours %>
+    14: 
+  app/views/time_entries/edit.html.erb:11:in `_app_views_time_entries_edit_html_erb___188466122822977311_70203674797960'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.4ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:47:45 +0200
+Processing by TimeEntriesController#edit as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 1]]
+  Rendered time_entries/edit.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `project_time_entry_path' for #<#<Class:0x007fb31ed556c8>:0x007fb31b3dc220>):
+     8: 	</ul>
+     9: <% end %>
+    10: 
+    11: <%= form_for [@project, @time_entry] do |f| %>
+    12: 	<%= f.label :hours %>
+    13: 	<%= f.text_field :hours %>
+    14: 
+  app/views/time_entries/edit.html.erb:11:in `_app_views_time_entries_edit_html_erb___188466122822977311_70203616420120'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.0ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.3ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:48:00 +0200
+Processing by TimeEntriesController#edit as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 1]]
+  Rendered time_entries/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:48:33 +0200
+Processing by TimeEntriesController#edit as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 1]]
+  Rendered time_entries/edit.html.erb within layouts/application (12.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `project_time_entry_path' for #<#<Class:0x007fb31ed556c8>:0x007fb31beb4aa8>):
+     8: 	</ul>
+     9: <% end %>
+    10: 
+    11: <%= form_for [@project, @time_entry] do |f| %>
+    12: 	<%= f.label :hours %>
+    13: 	<%= f.text_field :hours %>
+    14: 
+  app/views/time_entries/edit.html.erb:11:in `_app_views_time_entries_edit_html_erb___188466122822977311_70203622058820'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.7ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:49:31 +0200
+
+NoMethodError (undefined method `update' for #<ActionDispatch::Routing::Mapper:0x007fb32226f110>):
+  config/routes.rb:18:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.0ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:49:58 +0200
+Processing by TimeEntriesController#edit as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.1ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 1]]
+  Rendered time_entries/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 31ms (Views: 18.8ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/projects/2/time_entries/1" for ::1 at 2016-04-28 10:56:48 +0200
+
+AbstractController::ActionNotFound (The action 'update' could not be found for TimeEntriesController):
+  actionpack (4.2.5.1) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5.1) lib/action_dispatch/routing/route_set.rb:815:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.7ms)
+
+
+Started GET "/projects/2/time_entries/1/edit" for ::1 at 2016-04-28 10:56:55 +0200
+Processing by TimeEntriesController#edit as HTML
+  Parameters: {"project_id"=>"2", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.2ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 1]]
+  Rendered time_entries/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 19.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2/time_entries/1/new" for ::1 at 2016-04-28 11:35:39 +0200
+
+ActionController::RoutingError (No route matches [GET] "/projects/2/time_entries/1/new"):
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5.1) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5.1) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikelgarcia/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (66.7ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 11:35:49 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 17.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/2/time_entries" for ::1 at 2016-04-28 11:35:58 +0200
+Processing by TimeEntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a50SosAdMnAsaIEr58lSfE1lGgKabNevqoYh1fxVl6Det0s78R8n7j7PZbQGOHX0+o+qF9nzh7N7NkZW2ag8Yg==", "time_entry"=>{"hours"=>"12", "minutes"=>"12", "comments"=>"dpisfhisj", "date"=>"2016-01-01"}, "commit"=>"Save", "project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  app/controllers/time_entries_controller.rb:23:in `create'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (90.9ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 11:47:22 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered time_entries/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/projects/2/time_entries" for ::1 at 2016-04-28 11:47:36 +0200
+Processing by TimeEntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q8UfLjmBZzipAtVttQ2df7d+nV+AJEv05D4Q1F2aHpoe70a3CINyprulMfJU/Lr3AJQtSsO7G+g1jndXeGe1WA==", "time_entry"=>{"hours"=>"12", "minutes"=>"123", "comments"=>"dslihfdiodsh sds", "date"=>"2016-04-26"}, "commit"=>"Save", "project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "time_entries" ("hours", "minutes", "comments", "date", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["hours", 12], ["minutes", 123], ["comments", "dslihfdiodsh sds"], ["date", "2016-04-26 00:00:00.000000"], ["project_id", 2], ["created_at", "2016-04-28 09:47:36.229252"], ["updated_at", "2016-04-28 09:47:36.229252"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/2/time_entries
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 11:47:36 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.3ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 11:54:59 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered time_entries/_form.html.erb (2.5ms)
+  Rendered time_entries/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:11:48 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.2ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 38ms (Views: 28.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:16:49 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.3ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 37ms (Views: 26.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:18:07 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.2ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 35ms (Views: 25.8ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/projects/2/time_entries/42" for ::1 at 2016-04-28 12:18:12 +0200
+Processing by TimeEntriesController#delete as HTML
+  Parameters: {"authenticity_token"=>"rVsu+wsWBIjT6xL/sJlHPs1YIKSUPvAqe61tTX5NArsYcXdiOhQRFsFM9mBRaGC2erKQsdehoDaqHQrOW7CpeQ==", "project_id"=>"2", "id"=>"42"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.2ms)[0m  [1mSELECT  "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND "time_entries"."id" = ? LIMIT 1[0m  [["project_id", 2], ["id", 42]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "time_entries" WHERE "time_entries"."id" = ?[0m  [["id", 42]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/2/time_entries
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:18:12 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2016-04-28 12:29:20 +0200
+
+ArgumentError (Invalid route name, already in use: 'project_time_entries' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  config/routes.rb:19:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.7ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.1ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2016-04-28 12:29:31 +0200
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2016-04-28 12:33:16 +0200
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.3ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for ::1 at 2016-04-28 12:36:23 +0200
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.3ms)[0m  [1mSELECT  "projects".* FROM "projects"  ORDER BY "projects"."created_at" DESC LIMIT 10[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:36:28 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTimeEntry Load (0.2ms)[0m  [1mSELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')[0m  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/info/routes" for ::1 at 2016-04-28 12:38:46 +0200
+Processing by Rails::InfoController#routes as HTML
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.6ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.2ms)
+  Rendered /Users/mikelgarcia/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5.1/lib/rails/templates/rails/info/routes.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 12:47:08 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered partials/_errors.html.erb (0.3ms)
+  Rendered time_entries/_form.html.erb (2.1ms)
+  Rendered time_entries/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 36ms (Views: 23.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects/2/time_entries" for ::1 at 2016-04-28 12:47:31 +0200
+Processing by TimeEntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JNoK4hV2HnrrgxTJYTpcUvV9Tu2AEMb39pwXbnKbP/aR8FN7JHQL5Pkk8FaAy3vaQpf++MOPlusnLHDtV2aUNA==", "time_entry"=>{"hours"=>"13", "minutes"=>"23", "comments"=>"doihfiodhs fsoidshfio", "date"=>"2016-01-01"}, "commit"=>"Save", "project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "time_entries" ("hours", "minutes", "comments", "date", "project_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["hours", 13], ["minutes", 23], ["comments", "doihfiodhs fsoidshfio"], ["date", "2016-01-01 00:00:00.000000"], ["project_id", 2], ["created_at", "2016-04-28 10:47:31.118470"], ["updated_at", "2016-04-28 10:47:31.118470"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/projects/2/time_entries
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:47:31 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.2ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/time_entries" for ::1 at 2016-04-28 12:47:33 +0200
+Processing by TimeEntriesController#index as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mTimeEntry Load (0.1ms)[0m  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ? AND (date > '2016-04-01')  [["project_id", 2]]
+  Rendered time_entries/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 12:50:02 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered partials/_errors.html.erb (0.0ms)
+  Rendered time_entries/_form.html.erb (2.1ms)
+  Rendered time_entries/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 21.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects/2/time_entries" for ::1 at 2016-04-28 12:50:06 +0200
+Processing by TimeEntriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eRLfiWoVkDHHnj01tIaEIFTH4lv6czcoQgxDC9OpOW7MOIYQWxeFr9U52apVd6Oo4y1STrnsZzSTvCSI9lSSrA==", "time_entry"=>{"hours"=>"", "minutes"=>"", "comments"=>"", "date"=>""}, "commit"=>"Save", "project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered partials/_errors.html.erb (0.8ms)
+  Rendered time_entries/_form.html.erb (2.2ms)
+  Rendered time_entries/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 12:50:16 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered partials/_errors.html.erb (0.0ms)
+  Rendered time_entries/_form.html.erb (1.5ms)
+  Rendered time_entries/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 12:50:20 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[35mProject Load (0.2ms)[0m  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered partials/_errors.html.erb (0.0ms)
+  Rendered time_entries/_form.html.erb (1.6ms)
+  Rendered time_entries/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/2/time_entries/new" for ::1 at 2016-04-28 12:50:22 +0200
+Processing by TimeEntriesController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered partials/_errors.html.erb (0.0ms)
+  Rendered time_entries/_form.html.erb (1.5ms)
+  Rendered time_entries/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.2ms)

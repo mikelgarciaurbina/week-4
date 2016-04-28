@@ -19,6 +19,6 @@ class ProjectsController < ApplicationController
       name: params[:project][:name],
       description: params[:project][:description])
     @project.save
-    redirect_to "/projects/#{@project.id}"
+    redirect_to @project
   end
 end
