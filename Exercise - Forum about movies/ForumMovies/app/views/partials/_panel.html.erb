@@ -1,0 +1,14 @@
+<div><%= movie.title %></div>
+<div><img src="<%= movie.poster %>" alt="Movie poster" height="200"></div>
+<div><%= movie.year %></div>
+<div><%= movie.plot_summary %></div>
+
+<form action="/movies" method="post">
+	<input type="hidden" name="authenticity_token" value="or954jKEmRn3nUeAufYg5pG7KuFTnin/FvdrSRSSLHpBlKeiWALULG0FFHuBr2zUK/K7sd8s277UhiHWNEh7LQ==">
+	<input type="hidden" name="movie[title]" value="<%= movie.title %>">
+	<input type="hidden" name="movie[poster]" value="<%= movie.poster %>">
+	<input type="number" name="movie[year]" value="<%= movie.year %>" hidden>
+	<textarea name="movie[synopsis]" hidden><%= movie.plot_summary %></textarea>
+
+	<button type="submit">Start a discussion</button>
+</form>

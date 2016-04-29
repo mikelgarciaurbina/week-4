@@ -1,0 +1,21 @@
+<h1><%= @movie.title %></h1>
+<div><img src="<%= @movie.poster %>" alt="Movie poster" height="200"></div>
+<div><%= @movie.year %></div>
+<div><%= @movie.synopsis %></div>
+
+<% @comments.each do |comment| %>
+	<% binding.pry %>
+	<div><%= comment.user.name %> - <%= comment.comment %></div>
+	<div><%= comment.created_at %></div>
+<% end %>
+
+<% if session[:user_id] %>
+	<%= form_for [@movie, @comment_new] do |f| %>
+		<%= f.label :comment %>
+		<%= f.text_area :comment %>
+
+		<%= f.button %>
+	<% end %>
+<% else %>
+	<%= link_to "Login", user_login_path %>
+<% end %>

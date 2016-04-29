@@ -1,0 +1,12 @@
+<h1>Movies for: @search_word</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+    	<div><%= movie.title %></div>
+		<div><img src="<%= movie.poster %>" alt="Movie poster" height="200"></div>
+		<div><%= movie.year %></div>
+		<div><%= movie.synopsis %></div>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,12 @@
+<h1>Forum about Movies</h1>
+<h2>Search:</h2>
+
+<%= form_for @movie, :url => movies_search_path do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.button "Search" %>
+<% end %>
+<% unless session[:user_id] %>
+	<%= link_to "Login", user_login_path %>
+<% end %>
